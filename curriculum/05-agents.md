@@ -19,6 +19,14 @@ agentic problem the job descriptions describe.
 
 ## Build — `projects/p05-local-agent/`
 
+> **How this phase works.** Ask Claude for scaffolding — a task breakdown and
+> stubs for the capability layer and eval harness if useful — not a finished
+> agent. The eval harness and the routing policy especially should be things
+> you design, since designing them is most of the lesson. Ask for concept
+> explanations, hints, or review; ask for a reference implementation only
+> after a genuine attempt. Full version in
+> [`LEARNING_GUIDE.md`](../LEARNING_GUIDE.md).
+
 An agent over your own documents. Components:
 
 - **Retrieval**: `sentence-transformers` for embeddings (a small model — 
@@ -78,3 +86,18 @@ transferable lesson, and leaving the door closed costs nothing.
 - **Build the eval harness first.** It is tempting to iterate on the agent until
   it feels good and add evals later. That ordering wastes weeks; the whole point
   is having a number.
+
+## Comprehension checkpoint
+
+Answer these in your own words in `notes/` before calling the phase done:
+
+- Why build the eval harness before trying to make the agent good, rather
+  than after?
+- What's the difference between the agent failing because retrieval returned
+  the wrong chunks versus failing because generation reasoned badly about the
+  right chunks — and how would you tell which happened?
+- Why does refusing an out-of-scope tool call in the harness (code) matter
+  more than refusing it in the prompt (asking the model nicely not to)?
+- Your routing policy decides local-vs-escalate but never actually escalates.
+  What did building the decision framework teach you that skipping it
+  wouldn't have?

@@ -26,6 +26,16 @@ parameters or 3 B.
 
 ## Build — `projects/p01-compress-cifar/`
 
+> **How this phase works.** The brief below and the theory above are what you
+> get up front — not an implementation. Ask Claude for scaffolding: a
+> `projects/p01-compress-cifar/README.md` with the task broken into concrete
+> steps, and stub files with signatures/docstrings/TODOs where structure
+> helps. Then build it yourself. Good reasons to come back to Claude: a
+> concept explained before you start, a hint (not the answer) when stuck, a
+> review once something runs, or a reference implementation to compare against
+> — after a genuine attempt, not before. Full version in
+> [`LEARNING_GUIDE.md`](../LEARNING_GUIDE.md).
+
 ```bash
 make clean-phase && make env-p01
 ```
@@ -71,6 +81,25 @@ Two things worth doing properly:
   That is fine — benchmark quantized variants on CPU and say so in the label
   (`-cpu` suffix). Comparing a GPU fp32 number against a CPU int8 number without
   noting it is the easiest way to produce a plot that means nothing.
+
+## Comprehension checkpoint
+
+Answer these in your own words in `notes/` before calling the phase done:
+
+- Why does the PTQ-vs-QAT accuracy gap widen as bit-width drops, rather than
+  staying roughly constant?
+- Structured vs. unstructured pruning: which one actually gets you a
+  wall-clock speedup on this hardware, and why does the other not, even
+  though it removes just as many parameters?
+- Distillation uses a temperature on the softmax. What does raising it
+  actually do to the teacher's output distribution, and why does that help
+  the student learn?
+- You benchmarked a quantized variant on CPU because an op wasn't supported
+  on MPS. Why would comparing that number directly to an MPS fp32 number be
+  misleading, even though both numbers are individually correct?
+- If your five-rung Pareto curve had a point that was both smaller *and*
+  slower than the baseline, what would that tell you about where the real
+  bottleneck was?
 
 ## Before moving on
 

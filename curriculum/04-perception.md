@@ -22,6 +22,14 @@ one and instruments it properly.
 
 ## Build — `projects/p04-streaming-perception/`
 
+> **How this phase works.** Ask Claude for scaffolding — a project brief
+> breaking the pipeline into stages with a task list, and stubs for the
+> trickier plumbing (queues, buffering) if useful — not a finished pipeline.
+> The back-pressure policy in particular should be a decision you make and
+> defend, not one handed to you. Ask for concept explanations, hints, or
+> review; ask for a reference implementation only after a genuine attempt.
+> Full version in [`LEARNING_GUIDE.md`](../LEARNING_GUIDE.md).
+
 A **local real-time meeting assistant**:
 
 ```
@@ -80,3 +88,18 @@ The interesting failures are structural, not per-model:
 - **Audio format bugs outnumber model bugs**, by a lot. Sample rate mismatches
   and int16/float32 confusion produce transcripts that look like a model problem
   and are not.
+
+## Comprehension checkpoint
+
+Answer these in your own words in `notes/` before calling the phase done:
+
+- Why can a pipeline's end-to-end latency be much worse than the sum of each
+  stage's individually-measured latency?
+- You chose a back-pressure policy (drop / degrade / block). What does each
+  option actually cost the user, and how would someone listening notice the
+  difference?
+- Why does testing against a fixed recording matter more here than in earlier
+  phases, where synthetic benchmark inputs were fine?
+- If ASR and the LLM can't both stay resident in memory at once, what's the
+  real latency cost of swapping one out and back in — and how did you
+  measure that rather than guess it?

@@ -6,6 +6,24 @@ Nothing else in this curriculum is trustworthy without this phase. Every later
 claim — "quantization cost 1.2% accuracy for a 3.4x speedup" — is only as good as
 the harness that produced it.
 
+## A transparency note
+
+Phase 0 was fully implemented already — by Claude, in one pass, including
+tests. That wasn't the right call for a project whose whole point is that you
+build things yourself, and it won't happen again for Phases 1–6: those come as
+scaffolding and guidance, not finished code, so the building is yours. See
+[`LEARNING_GUIDE.md`](../LEARNING_GUIDE.md) for the full reasoning.
+
+`edgebench/` and `runners/` get to be the one exception, on the reasoning that
+they're shared lab equipment — a measurement harness and a backend abstraction
+every later phase leans on — rather than the subject being taught. Even so,
+they're worth treating as a worked example, not a black box: read them with
+the package READMEs open (`edgebench/README.md`, `edgebench/power/README.md`,
+`runners/README.md`), and use the comprehension checkpoint below as a real
+gate, not a formality. If you want the fuller version of this phase, pick one
+module — `timing.py` is a good size — and reimplement it from scratch without
+looking, then diff your version against the original.
+
 ## Theory
 
 Short phase; read while building.
@@ -48,6 +66,28 @@ Specifically:
 - [x] `git log` has at least one commit, so `git_sha` is populated in new rows.
 - [x] `make test` — 23 tests green, including AST checks that platform-specific
       imports have not escaped their modules.
+
+## Comprehension checkpoint
+
+Answer these in your own words — writing them into `notes/` is the point, not
+just thinking them:
+
+- Why does `resolve("cuda")` raise instead of returning `"cpu"` on this machine?
+- What actually goes wrong if you delete the `sync()` call inside
+  `measure_latency`'s loop?
+- What's the unit bug that `peak_rss_mb()` specifically guards against, and
+  what would your numbers look like if you got it backwards?
+- Walk through, step by step, what happens when `power.get_sampler()` runs on
+  a machine with no NVML, no readable RAPL counters, and no passwordless sudo
+  for `powermetrics`. Why does it never raise?
+- Why does `edgebench` report p50/p95/p99 instead of just a mean? Sketch a
+  workload where the mean looks fine while p99 is terrible.
+- `Result` carries an `extra` field alongside ~30 named columns. What's the
+  tradeoff there, and why not just add a column for everything?
+
+If any of these are shaky, reread the relevant module (or its README) before
+treating Phase 0 as understood — the checklist above says the harness *works*;
+this section is what says you know *why*.
 
 ## Optional: enable power measurement
 

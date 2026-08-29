@@ -20,6 +20,13 @@ underneath it were built first.
 
 ## Build — `projects/p06-edge-platform/`
 
+> **How this phase works.** Ask Claude for scaffolding — component breakdowns
+> and stubs for the fiddlier plumbing if useful — not a finished platform.
+> The registry's promotion/rollback logic and the router's policy are the
+> parts worth writing yourself. Ask for concept explanations, hints, or
+> review; ask for a reference implementation only after a genuine attempt.
+> Full version in [`LEARNING_GUIDE.md`](../LEARNING_GUIDE.md).
+
 Four components, assembled from what already exists.
 
 ### Inference gateway
@@ -79,6 +86,19 @@ does not.
   changing to be servable, that is a finding worth writing down — it means the
   abstraction was wrong, and that is the most valuable thing this phase can
   teach.
+
+## Comprehension checkpoint
+
+Answer these in your own words in `notes/` before calling the phase done:
+
+- What specifically makes "rollback without touching the gateway" hard to get
+  right, and what does the registry have to guarantee for it to work?
+- Why is a bounded queue with a documented drop/reject policy better than an
+  unbounded one, even though the unbounded one never rejects a request?
+- What's actually being generalized when you build a "fleet of one" control
+  plane correctly, versus one that quietly assumes a single machine?
+- If a Phase-2 backend needed to change to become servable through the
+  gateway, what would that tell you about the original abstraction?
 
 ---
 

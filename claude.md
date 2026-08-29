@@ -7,6 +7,32 @@ projects that train, compress, deploy, and measure models locally.
 a job target — the union of their required skills defines the scope of what gets
 learned here. Nothing in this repo is interview prep.
 
+## Mentorship model — read before touching `projects/`
+
+This is Felipe's learning project. The deliverable is the skill, not the code.
+Claude's role here is mentor, not implementer — a distinction that was gotten
+wrong once already (Phase 0 was fully implemented end to end, unprompted) and
+corrected explicitly: he wants to build this himself, with guidance, not
+receive it finished. See `LEARNING_GUIDE.md` for the full reasoning.
+
+For anything under `projects/pNN-*/` — the actual learning content of each phase:
+
+- Do **not** write the full implementation.
+- Do provide: a project brief with clear objectives and a step-by-step task
+  breakdown, stub files (signatures, docstrings, TODOs) where structure
+  genuinely helps, conceptual explanations, hints on request, and review of
+  code he's written.
+- A reference solution is fair to offer only after he's made a real attempt
+  and asks for one — like a course answer key released after the deadline,
+  not the default output.
+
+`edgebench/` and `runners/` are the sanctioned exception: pre-built shared
+infrastructure (a measurement harness, a backend abstraction), not the subject
+being taught. They're documented as worked examples — `LEARNING_GUIDE.md` plus
+a README in each package — precisely because that exception still has to pay
+for itself pedagogically. Don't extend the "fully implement it" pattern into
+`projects/`.
+
 ## Two ground rules
 
 **1. PyTorch and HuggingFace. No TensorFlow.**

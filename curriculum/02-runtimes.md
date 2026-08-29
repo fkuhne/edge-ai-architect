@@ -23,6 +23,14 @@ across diverse silicon without rewrites."*
 
 ## Build — `projects/p02-runtime-shootout/`
 
+> **How this phase works.** Ask Claude for scaffolding — a project brief with
+> the task broken into steps, stub files with TODOs where structure helps —
+> not a finished `onnx_runner.py`/`coreml_runner.py`. Build the `_load()` and
+> `infer()` methods yourself; that implementation *is* the lesson. Ask for
+> concept explanations, hints, or a review of your attempt; ask for a
+> reference implementation only after you've genuinely tried. Full version in
+> [`LEARNING_GUIDE.md`](../LEARNING_GUIDE.md).
+
 ```bash
 make clean-phase && make env-p02
 make env-apple      # optional: adds the coreml + mlx plug-ins
@@ -93,3 +101,19 @@ to detect it here transfers directly.
   *different package* and CUDA-only — a portability seam worth noting in
   `notes/`, since it means the install line differs per platform even though the
   code does not.
+
+## Comprehension checkpoint
+
+Answer these in your own words in `notes/` before calling the phase done:
+
+- What does it mean, concretely, for an ONNX Runtime session to "fall back to
+  CPU" for one operator? How would you detect it happened without being told?
+- Your benchmark loop iterates `runners.available()` with no backend-specific
+  branching. What had to be true about `BaseRunner` for that to be possible?
+- Why must `is_available()` never raise, even when the underlying import
+  genuinely fails? What would break if it raised instead?
+- ANE power reads near-zero during a Core ML call that "succeeded." What are
+  the two different explanations for that, and how would you tell them apart?
+- Why does `onnxruntime-gpu` being a separate package from `onnxruntime`
+  matter for how you'd write install scripts, even though the Python code
+  doesn't change?

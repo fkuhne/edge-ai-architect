@@ -20,6 +20,14 @@ Everything from Phase 1 returns at a scale where the tradeoffs are unavoidable.
 
 ## Build — `projects/p03-llm-on-device/`
 
+> **How this phase works.** Ask Claude for scaffolding for each of the three
+> pieces below — a task breakdown and stubs, not finished scripts. (c) in
+> particular is meant to be hand-written: the accept/reject loop is short and
+> the understanding lives in writing it, not in reading it. Ask for concept
+> explanations, hints, or review; ask for a reference implementation only
+> after a genuine attempt. Full version in
+> [`LEARNING_GUIDE.md`](../LEARNING_GUIDE.md).
+
 ```bash
 make clean-phase && make env-p03
 brew install cmake          # llama.cpp needs it
@@ -88,3 +96,23 @@ memory budget it flips, is a better outcome than a speedup.
 - **Watch for swap.** If tokens/sec collapses non-linearly as the model grows,
   you have found the memory cliff, not a quantization effect. Note the peak RSS
   alongside — that is what distinguishes the two.
+
+## Comprehension checkpoint
+
+Answer these in your own words in `notes/` before calling the phase done:
+
+- Why are TTFT and tokens/sec governed by different hardware bottlenecks
+  (compute vs. memory bandwidth)? What would doubling the prompt length do to
+  each, versus doubling the model's hidden size?
+- In speculative decoding, what determines whether a drafted token gets
+  accepted or rejected, and why is that step necessary instead of always
+  trusting the draft model?
+- Why might speculative decoding fail to speed anything up on an 8 GB machine
+  even though it works on paper? What resource is actually being traded for
+  what?
+- Explain, in your own words, why `bitsandbytes` 4-bit quantization is
+  effectively CUDA-only, and what that implies for writing "portable" LoRA
+  fine-tuning code.
+- If tokens/sec drops off a cliff at a certain context length, how do you
+  tell whether that's an algorithmic effect (attention cost growing with
+  sequence length) or a memory effect (swap)?

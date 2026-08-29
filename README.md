@@ -6,6 +6,18 @@ them, deploy them across runtimes, and measure every step on real hardware.
 Everything runs **locally**. Everything is **portable** — the code is written for
 a generic Linux/CUDA box and merely happens to be developed on an Apple M3.
 
+## Read this first: how this repo teaches
+
+This is a mentor relationship, not a build contract — Claude scaffolds and
+explains, you implement. Phase 0 (`edgebench/`, `runners/`) is the one
+exception: fully pre-built as shared infrastructure, and documented as a
+worked example rather than a black box. Phases 1–6, where the actual edge-ML
+skills live, work as guided builds — theory, a task breakdown, stubs where
+useful, code review — not finished code.
+
+Full explanation, including how to ask well and what the comprehension
+checkpoints are for: **[LEARNING_GUIDE.md](LEARNING_GUIDE.md)**.
+
 ## Quickstart
 
 ```bash
@@ -43,13 +55,19 @@ Sized for ~6–10 hrs/week. Phases are sequential and the projects compound.
 
 | | Phase | Weeks | Core question | Status |
 |---|---|---|---|---|
-| 0 | [Bootstrap & edgebench](curriculum/00-bootstrap.md) | 1 | How do I measure anything credibly, on any machine? | ▶ in progress |
-| 1 | [Foundations & compression](curriculum/01-foundations.md) | 2–5 | What do I actually give up to make a model small? | ☐ |
-| 2 | [Runtimes & backend abstraction](curriculum/02-runtimes.md) | 6–9 | How does one model run on any accelerator without a rewrite? | ☐ |
-| 3 | [On-device LLMs](curriculum/03-llms.md) | 10–14 | How does a transformer behave under a hard memory ceiling? | ☐ |
-| 4 | [Streaming perception](curriculum/04-perception.md) | 15–18 | How do I hold a real-time latency budget end to end? | ☐ |
-| 5 | [Agentic runtime & RAG](curriculum/05-agents.md) | 19–23 | How do I make a small model reliable enough to trust with tools? | ☐ |
-| 6 | [Platform & lifecycle](curriculum/06-platform.md) | 24–28 | How does this become a system rather than a pile of scripts? | ☐ |
+| 0 | [Bootstrap & edgebench](curriculum/00-bootstrap.md) | 1 | How do I measure anything credibly, on any machine? | ✓ pre-built* |
+| 1 | [Foundations & compression](curriculum/01-foundations.md) | 2–5 | What do I actually give up to make a model small? | ☐ your build |
+| 2 | [Runtimes & backend abstraction](curriculum/02-runtimes.md) | 6–9 | How does one model run on any accelerator without a rewrite? | ☐ your build |
+| 3 | [On-device LLMs](curriculum/03-llms.md) | 10–14 | How does a transformer behave under a hard memory ceiling? | ☐ your build |
+| 4 | [Streaming perception](curriculum/04-perception.md) | 15–18 | How do I hold a real-time latency budget end to end? | ☐ your build |
+| 5 | [Agentic runtime & RAG](curriculum/05-agents.md) | 19–23 | How do I make a small model reliable enough to trust with tools? | ☐ your build |
+| 6 | [Platform & lifecycle](curriculum/06-platform.md) | 24–28 | How does this become a system rather than a pile of scripts? | ☐ your build |
+
+\* *Phase 0 was fully implemented by Claude, which — for a project about learning
+edge ML by building it — was more than it should have done. It's kept as a
+documented worked example rather than rebuilt as an exercise; every phase after
+it is scaffolding and guidance, not finished code. See
+[LEARNING_GUIDE.md](LEARNING_GUIDE.md).*
 
 Full bibliography: [curriculum/resources.md](curriculum/resources.md).
 
@@ -76,10 +94,15 @@ See [CLAUDE.md](CLAUDE.md) for the full conventions.
 ## Layout
 
 ```
-edgebench/      portable measurement (stdlib + psutil only)
-runners/        backend abstraction: torch | onnx | coreml | mlx
-projects/       one directory per phase project
-curriculum/     phase briefs and the bibliography
-notes/          learning notes
-results/        bench.db and generated plots
+LEARNING_GUIDE.md   the mentorship model -- read this before anything else
+edgebench/          portable measurement (stdlib + psutil only) -- see its README
+runners/            backend abstraction: torch | onnx | coreml | mlx -- see its README
+projects/           one directory per phase project
+curriculum/         phase briefs, each ending in a comprehension checkpoint
+notes/              learning notes
+results/            bench.db and generated plots
 ```
+
+`edgebench/README.md`, `edgebench/power/README.md`, and `runners/README.md`
+each walk through their package's design decisions as a worked example —
+worth reading in full rather than treating as reference documentation.
