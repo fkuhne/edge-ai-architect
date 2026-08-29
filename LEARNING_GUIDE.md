@@ -10,6 +10,12 @@ The code stays — rewriting it as an unsolved exercise now would just waste wha
 
 ## The loop, for every phase from here on
 
+Felipe's own formulation, which is the clearest statement of it:
+**read → do → make mistakes → correct → get mentored → repeat.**
+
+The mistakes are load-bearing, not a side effect to be minimized. What follows
+is that loop in more operational detail.
+
 1. **Read the theory** in `curriculum/0N-*.md` — papers, courses, docs.
 2. **Ask Claude for scaffolding, not code**: a project brief with the task broken into concrete steps, stub files (signatures + docstrings + TODOs) where structure helps, and pointers back to the relevant theory.
 3. **Build it.** This part has to be yours. Struggling here isn't a sign anything's wrong — it's most of the point.
@@ -33,6 +39,17 @@ The phrasing changes what you get back:
 | *(nothing — just moving on)* | "here's my solution to 3(a) — is there a cleaner way, and did I miss an edge case?" |
 
 None of this means Claude should refuse to write code here — sometimes the fastest way to understand a pattern is to see it once, well-explained. It means the default is scaffolding and explanation, and a full implementation is something asked for deliberately, having already tried.
+
+## When you're stuck, or heading somewhere wrong
+
+An explicit ladder, so neither of us has to guess:
+
+1. **Hints first.** If you're heading toward a mistake, or stuck on one, you get pointers — the concept you're probably missing, the thing worth checking, the question to ask yourself. Not the fix.
+2. **Then the answer, with the explanation.** If the hints don't land after a few attempts, you get the actual answer *and* the reasoning behind it. Never a bare correction — a fix you can't reconstruct the logic for wastes the mistake you just paid for.
+
+Mistakes are load-bearing here, but only up to the point where the lesson has been extracted. Past that, struggling is just lost time, and dragging it out is its own failure mode.
+
+One practical limit: Claude can't watch you work, so "stuck after some tries" usually has to be reported. Say so, and say what you've already tried — that's what determines whether you get a hint or the answer.
 
 ## Comprehension checkpoints
 
