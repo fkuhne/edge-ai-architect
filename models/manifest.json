@@ -1,0 +1,5 @@
+{
+  "_comment": "Tracked model cache. Weights are git-ignored; this manifest is not, so the cache stays reproducible without the bytes. Add an entry when downloading a model; remove it when deleting one. Budget: 8 GB (see `make disk`).",
+  "budget_gb": 8,
+  "models": []
+}

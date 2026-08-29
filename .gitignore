@@ -1,0 +1,42 @@
+# Model weights and datasets never go in git -- they are large, and on this
+# machine disk is the binding constraint. `models/manifest.json` is tracked so
+# the cache contents stay reproducible without the bytes.
+models/*
+!models/manifest.json
+!models/.gitkeep
+data/
+*.gguf
+*.onnx
+*.mlpackage/
+*.mlmodelc/
+*.safetensors
+*.pt
+*.pth
+*.bin
+
+# Benchmark results: the database is local, the exported reports are shareable.
+results/*.db
+results/*.db-journal
+results/*.db-wal
+results/*.png
+results/*.svg
+!results/.gitkeep
+
+# Per-phase virtual environments (see `make env-<phase>`)
+.venv*/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+dist/
+build/
+
+# Profiling artifacts
+*.json.gz
+onnxruntime_profile_*.json
+*.trace
+
+.DS_Store
+.env

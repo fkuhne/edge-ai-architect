@@ -1,0 +1,81 @@
+Job Summary
+
+The next era of AI will be built local, more secure, more mobile, and closer to the work. HP is leading the way in Edge AI. This role provides senior technical leadership and end-to-end architectural oversight of a full-stack Edge AI platform, spanning from silicon and systems hardware at the foundation through model management and lifecycle governance at the top. As the highest-level individual technical authority for the platform, the role sets and owns the technical direction across every layer of the stack — hardware enablement, the security and OS trust foundation, inference serving, agentic runtimes and creation tooling, fleet management, and model management — ensuring the platform behaves as one coherent, secure, and performant system rather than a collection of independent components.
+
+The role evaluates and introduces technologies, defines cross-layer architecture and interface contracts, and establishes the engineering standards and best practices that optimize development. Working closely with product managers, engineering leaders, firmware and hardware teams, security, quality assurance, and business stakeholders, the role gathers requirements, defines architectural scope, and drives alignment throughout the full development lifecycle — from on-device silicon enablement to model lifecycle governance and edge-to-cloud orchestration.
+
+Responsibilities
+
+Own the multi-year technical roadmap and architectural vision for a full-stack Edge AI platform, with a strong focus on orchestrating LLMs, vLMs, and agent-based systems across constrained, on-device, and clustered environments. 
+Define the cross-layer architecture and the interface contracts that connect hardware, OS/security, inference, agentic runtime, and model-management layers so the platform operates as a single, coherent, and upgradeable system. 
+Architect model management, registry, and lifecycle systems — governing versioning, signing, evaluation, promotion, provenance, and rollback of models across a distributed fleet. 
+Set the architecture for agentic AI runtimes and agent-creation tooling — defining how agents are built, sandboxed, permissioned, tool-integrated, governed, and safely operated in production. 
+Drive the inference-serving strategy — model serving, inference gateways, and model/request routing — optimized for throughput, latency, and cost across heterogeneous silicon. 
+Architect the control plane, end-to-end telemetry, and cost-management frameworks that make on-device and clustered deployments deployable, observable, and manageable at scale. 
+Own the security architecture — hardware-rooted chain of trust, secure boot, workload isolation, and sandboxing — ensuring safe execution of agentic workloads. 
+Partner deeply with silicon, firmware, and hardware teams to exploit modern compute platforms and build abstraction layers that let AI workloads deploy across diverse silicon without rewrites. 
+Architect seamless edge-to-cloud handoff frameworks optimized for cost, latency, privacy, and performance, and define when and how workloads run on-device, at the cluster, or in the cloud. 
+Enable multi-modal AI experiences, integrating vision, audio, and text inputs from the runtime through to model management. 
+Design scalable on-device lifecycle management frameworks — including deployment, observability, updateability, and manageability — that hold up across a distributed fleet. 
+Drive cross-functional influence, bringing together experts across software, firmware, hardware, security, and business teams to converge on a unified platform architecture. 
+Communicate technology strategy and the multi-year roadmap to executive leadership, industry partners, and customers, translating deep technical direction into business impact. 
+Serve as a trusted technical advisor and the enterprise's top design authority for Edge AI, influencing enterprise-level decision-making through combined technical and business expertise. 
+Provide architectural guidance, consultation, and design-review authority across all layers, applications, and platforms, resolving cross-layer trade-offs and setting engineering standards. 
+Assess emerging technologies, develop business cases, and shape the platform portfolio in partnership with architects, product leaders, and operations. 
+Ensure effective enablement and training for engineering, services, support, and sales teams. 
+Mentor and develop emerging technical leaders and architects, fostering a culture of innovation and engineering excellence. 
+
+Education & Experience Recommended
+
+ Four-year or Graduate Degree in Computer Science, Information Technology, Software Engineering, or any other related discipline or commensurate work experience or demonstrated competence.
+ Typically has 12+ years of work experience, preferably in software designing & development, software architecture, programming languages, or a related field.
+
+Demonstrated experience architecting across multiple layers of a modern AI stack — from hardware/OS enablement and inference serving to agentic runtimes and model lifecycle — is strongly preferred.
+
+Preferred Certifications
+
+Programming Language Certification (Python, C++, Rust, Java, or similar). 
+Cloud or platform architecture certification (AWS, Azure, or CNCF/Kubernetes) is a plus. 
+
+Knowledge & Skills
+
+LLM, vLM, and multi-modal model architecture and orchestration 
+Agentic AI systems and runtimes (agent harnesses, tool use, sandboxing, governance) 
+Inference serving and optimization (model serving, inference gateways, model/request routing) 
+Edge AI and edge-to-cloud architecture (latency, cost, privacy, on-device constraints) 
+Model management, registry, lifecycle, versioning, and provenance 
+GPU/accelerator computing and heterogeneous silicon (CUDA and related) 
+Hardware/software co-design and silicon abstraction layers 
+Security foundations: chain of trust, secure boot, isolation, sandboxing, and confidential computing 
+Fleet management, control planes, observability, and telemetry 
+Distributed systems and scalability 
+Kubernetes, Docker, and containerized/microservices architecture 
+Python, C++, Rust (systems-level and ML tooling) 
+MLOps / LLMOps and CI/CD for models and agents 
+Cloud platforms (AWS, Microsoft Azure) and hybrid deployment 
+Cost, latency, and performance optimization at scale 
+DevOps and automation 
+Software engineering and full-stack development 
+APIs and interface/contract design across layers 
+
+Cross-Org Skills
+
+ Effective Communication
+ Results Orientation
+ Learning Agility
+ Digital Fluency
+ Customer Centricity
+
+Impact & Scope
+
+Serves as the top technical authority for the Edge AI platform; sets long-term strategic and architectural direction across the full stack and influences multiple functions and disciplines across the organization.
+
+Complexity
+
+ Invents, develops and introduces new methods and techniques that impact multiple disciplines and work groups.
+
+Disclaimer
+
+ This job description describes the general nature and level of work performed in this role. It is not intended to be an exhaustive list of all duties, skills, responsibilities, knowledge, etc. These may be subject to change and additional functions may be assigned as needed by management.
+
+The pay range for this role is $174,050 to $278,450 USD annually with additional opportunities for pay in the form of bonus and/or equity (applies to United States of America candidates only). Pay varies by work location, job-related knowledge, skills, and experience.

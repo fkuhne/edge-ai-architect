@@ -1,0 +1,68 @@
+Description -
+
+We are seeking an innovative and results-driven AI Solution Engineer to design, develop, and deploy next-generation AI-powered solutions that transform document workflows, business processes, and customer experiences. This role will leverage technologies such as Artificial Intelligence (AI), Large Language Models (LLMs), Natural Language Processing (NLP), AI Agents, Computer Vision, and Edge AI to create intelligent solutions for enterprise customers.
+
+As a key member of the imaging team, you will work closely with product management, imaging and software architects, and development partners to prototype, develop, integrate, and deploy imaging algorithms and scalable AI solutions that deliver measurable business value. You will help identify emerging technology opportunities, translate customer and business requirements into innovative products, and bring new imaging and AI-enabled capabilities to market.
+
+The ideal candidate combines strong software engineering skills with hands-on experience in AI application development, image science, machine learning technologies, and cloud-based services. You are passionate about innovation, thrive in a collaborative environment, and enjoy solving complex business challenges through technology.
+
+Responsibilities
+
+Design, develop, and deploy AI-powered applications and solutions that improve productivity, automate workflows, and enhance customer experiences.
+Prototype and evaluate emerging technologies, including Large Language Models (LLMs), Natural Language Processing (NLP), AI Agents, Computer Vision, and Edge AI solutions.
+Develop intelligent document workflow solutions that leverage AI to extract insights, automate decisions, and streamline business processes.
+Collaborate with product managers, architects, and engineering teams to define technical requirements and solution architectures.
+Create and execute comprehensive testing plans, validation protocols, and technical documentation to ensure solution quality, performance, and reliability.
+Troubleshoot, debug, and resolve software, integration, and deployment issues across the solution stack.
+Work with internal and external development partners to deliver projects on schedule and meet quality objectives.
+Stay current with industry trends and emerging technologies, identifying opportunities to incorporate innovative AI capabilities into future products and solutions.
+Mentor and provide technical guidance to junior engineers and other team members.
+
+Required Qualifications
+
+Bachelor's degree in Computer Science, Computer Engineering, Software Engineering, Image Processing, Data Science, Artificial Intelligence, or a related technical field.
+5+ years of software development experience in enterprise or commercial product environments.
+Experience developing applications using modern programming languages such as Python, C#, Java, JavaScript, or C++..
+Knowledge of software development lifecycle (SDLC), Agile methodologies, and DevOps practices.
+Strong problem-solving, analytical, and debugging skills.
+Excellent written and verbal communication skills.
+Ability to collaborate effectively across global and cross-functional teams.
+
+Preferred Qualifications
+
+Experience developing AI-powered applications using LLMs such as OpenAI, Azure OpenAI, Anthropic, Gemini, or similar platforms.
+Knowledge of agentic AI frameworks and multi-agent systems.
+Experience with Natural Language Processing (NLP) and machine learning technologies.
+Experience building cloud-native solutions using Azure, AWS, or Google Cloud.
+Experience with data pipelines, model deployment, and AI lifecycle management.
+Familiarity with imaging, document processing, OCR, or intelligent document automation solutions.
+Experience with enterprise workflow automation platforms and business process orchestration.
+Understanding of responsible AI principles, security, privacy, and governance requirements.
+
+Key Skills
+
+Technical Skills
+
+Artificial Intelligence (AI)
+Large Language Models (LLMs)
+Natural Language Processing (NLP)
+Agentic AI & AI Agents
+Machine Learning
+Python, C#, Java, JavaScript, C++
+Cloud Computing (Azure, AWS, GCP)
+Image Science and Document Intelligence
+Software Architecture and System Integration
+
+Professional Skills
+
+Innovation and Technology Leadership
+Strategic Thinking
+Problem Solving
+Cross-functional Collaboration
+Technical Communication
+Project Leadership
+Customer Focus
+Mentoring and Coaching
+Continuous Learning
+
+The pay range for this role is $130,700 to $205,200 USD annually with additional opportunities for pay in the form of bonus and/or equity (applies to United States of America candidates only). Pay varies by work location, job-related knowledge, skills, and experience.

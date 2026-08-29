@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(uv venv *)",
+      "Bash(uv pip *)",
+      "Bash(.venv/bin/python -c \"import edgebench, psutil; print\\('edgebench', edgebench.__version__\\)\")",
+      "Bash(.venv/bin/python -m edgebench.selftest)",
+      "Bash(.venv/bin/python -c ' *)"
+    ]
+  }
+}

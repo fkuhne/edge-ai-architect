@@ -1,0 +1,79 @@
+Description -
+
+HP is seeking a Senior Software Engineer to help develop software platforms within HP’s device and services ecosystem. This role will contribute to the design, implementation, integration, and validation of modern software experiences that span client applications, backend services, cloud integrations, device interfaces, and enterprise-ready workflows.
+
+This role offers the opportunity to work in a start-up-like incubation environment within HP’s PC Design team — moving quickly, solving ambiguous product challenges, and helping build new products that integrate edge AI into next-generation PC experiences. You will work closely with customers and cross-functional partners to understand real-world needs, incorporate feedback into product development, and help translate early concepts into scalable, production-quality software.
+
+Ideal Candidates Should Have Demonstrated Excellence E.g. Successful Shipped New Products/features At Scale, Significant Contributions To Important Open-source Projects - In Two Or More Of The Following Areas
+
+Large language models, 
+Computer vision models, 
+Speech recognition and synthesis, 
+Audio-video multimodal models 
+Human computer intelligent interactions 
+Deep neural networks 
+Model size reduction 
+Synthetic photorealistic image data generation 
+Robotics 
+Embedded systems 
+Cloud computing 
+AI Agents 
+Other relevant technologies (do tell us about them!) 
+
+This role requires strong technical judgment, practical problem-solving skills, and the ability to build reliable software in a fast-moving product development environment.
+
+You will collaborate closely with cross-functional teams across software architecture, UX, product management, hardware engineering, security, manageability, validation, DevOps, systems engineering, and AI/ML engineering to deliver scalable, high-quality software capabilities.
+
+Key Responsibilities
+
+Design, develop, and maintain full-stack software features across frontend applications, backend services, local application components, cloud-connected workflows AI-enabled platform capabilities. 
+Integrate, evaluate, and deploy machine learning models — including LLMs, vision models, and audio models — into production software, covering data preprocessing, inference pipelines, evaluation, and monitoring. 
+Work with audio-video and multimodal models to enable capabilities such as meeting understanding, video summarization, audio-visual speaker attribution, and cross-modal search. 
+Fine-tune and adapt pre-trained models for product-specific use cases, and define the datasets, benchmarks, and quality metrics used to measure and improve them. 
+Design and implement agentic and retrieval-augmented (RAG) workflows that combine LLMs, tool use, and enterprise data sources. 
+Design, build, and evaluate agentic AI workflows — task decomposition, planning and reasoning loops, tool and function calling, memory and context management, and multi-agent orchestration — that automate real user workflows end to end. 
+Integrate machine learning models with cloud-based platforms and/or embedded systems for deployment in production environments. 
+Define guardrails, evaluation harnesses, and observability for agentic systems, including failure handling, human-in-the-loop checkpoints, cost and latency budgets, and reliability metrics. 
+Develop automated tests and contribute to CI/CD, build pipelines, code signing, packaging, and release readiness. 
+Stay updated with the latest advancements in machine learning, computer vision, robotics, and related fields to drive innovation within the organization. 
+Mentor junior team members and actively participate in knowledge sharing activities. 
+
+Education And Experience
+
+Bachelor’s or Master’s degree in Computer Science, Software Engineering, Computer Engineering, Electrical Engineering, Machine Learning, Mathematics, or equivalent practical experience. 
+4-8 years of full-stack software development experience across frontend, backend, and application-level development. 
+Hands-on experience building, fine-tuning, or deploying machine learning models in production systems 
+
+Knowledge And Skills
+
+Experience building modern frontend applications using technologies such as Angular, React, TypeScript, JavaScript, HTML, and CSS. 
+Backend development experience with one or more languages such as C++, Rust, Python, C#, Node.js, Go, or similar. 
+Experience integrating AI services, including LLMs and modern AI APIs. 
+Hands-on machine learning experience with frameworks such as PyTorch, TensorFlow / TensorFlow Lite, ONNX Runtime, or Hugging Face Transformers, including model inference, fine-tuning, and evaluation. 
+Experience designing multi-agent and long-running agentic pipelines with state management, retries, deterministic recovery, and evaluation of end-to-end task success. 
+Experience with LLMs, Vision Language, and speech models 
+Understanding of deep neural networks and model optimization techniques such as quantization, pruning, distillation, and model size reduction for edge and on-device deployment. 
+Experience deploying and serving models in cloud and edge environments (AWS, Azure, or Google Cloud, containerized inference, GPU/NPU acceleration). 
+Strong Python skills, with practical experience in data preprocessing, dataset creation, and model evaluation metrics. 
+Experience developing Windows desktop applications, APIs, and cloud-connected software. 
+Strong debugging, performance optimization, and software troubleshooting skills. 
+Experience with Git, CI/CD pipelines, automated testing, and modern software development practices. 
+Strong written and verbal communication skills with the ability to work effectively across global, cross-functional engineering teams. 
+
+
+
+Preferred
+
+Experience with Tauri, WebView, WebRTC, PowerShell, COM, or native Windows development. 
+Experience with Microsoft Graph, Azure, Microsoft Intune, ADMX/Group Policy, or enterprise device management. 
+Experience building and deploying real-time and streaming audio pipelines — audio capture, resampling, chunking, buffering, WebSocket/gRPC streaming, and low-latency inference. 
+Experience with enterprise manageability solutions (MS Intune, ADMX/Group Policy, HP WXP or similar MDM/UEM platforms) 
+Experience building telemetry, diagnostics, resource monitoring, benchmarking, and test automation frameworks. 
+Experience with authentication, identity, SSO, and enterprise integrations. 
+Experience with LLM application patterns such as RAG, function/tool calling, agentic pipelines, and prompt/context optimization. 
+Experience running local or on-device inference on NPUs and accelerators (Windows ML/DirectML, OpenVINO, TensorRT, CoreML, or vendor NPU toolchains). 
+Experience with computer vision — object detection, OCR and document digitization, pose estimation, or depth/3D estimation. 
+Experience with speech synthesis (TTS), audio enhancement, or noise suppression. 
+Experience with MLOps tooling for experiment tracking, dataset versioning, model registries, and continuous model evaluation. 
+
+The pay range for this role is $165,450 to $259,750 USD annually with additional opportunities for pay in the form of bonus and/or equity (applies to United States of America candidates only). Pay varies by work location, job-related knowledge, skills, and experience.
