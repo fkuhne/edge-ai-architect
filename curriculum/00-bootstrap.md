@@ -45,7 +45,9 @@ Specifically:
 - [x] A missing power sampler degrades to `null` with a note, never an exception.
 - [x] `runners.describe()` reports backend availability without importing
       anything that isn't installed.
-- [ ] `git log` has at least one commit, so `git_sha` is populated in new rows.
+- [x] `git log` has at least one commit, so `git_sha` is populated in new rows.
+- [x] `make test` — 23 tests green, including AST checks that platform-specific
+      imports have not escaped their modules.
 
 ## Optional: enable power measurement
 

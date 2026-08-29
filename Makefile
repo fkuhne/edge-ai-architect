@@ -83,8 +83,8 @@ disk: ## Show free disk and the model cache against its budget
 	@echo "Budget: $(BUDGET_GB) GB"
 	@echo
 	@echo "Largest cached files:"
-	@find $(MODELS_DIR) -type f -size +50M -exec du -h {} + 2>/dev/null \
-		| sort -rh | head -10 || echo "  (none)"
+	@found=$$(find $(MODELS_DIR) -type f -size +50M -exec du -h {} + 2>/dev/null | sort -rh | head -10); \
+	if [ -n "$$found" ]; then echo "$$found"; else echo "  (none over 50 MB)"; fi
 
 .PHONY: clean-phase
 clean-phase: ## Delete the venv and report reclaimed space
@@ -102,7 +102,7 @@ clean: ## Remove caches and build artifacts (keeps venv, models, results)
 help: ## List targets
 	@echo "edge-ai-architect"
 	@echo
-	@grep -hE '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) \
+	@grep -hE '^[a-zA-Z0-9_-]+:.*?## .*$$' $(MAKEFILE_LIST) \
 		| awk 'BEGIN {FS = ":.*?## "}; {printf "  \033[36m%-14s\033[0m %s\n", $$1, $$2}'
 	@echo
 	@echo "Start here:  make env-core && make selftest"
