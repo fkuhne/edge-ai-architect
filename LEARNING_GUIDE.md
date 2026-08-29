@@ -19,7 +19,7 @@ The code stays — rewriting it as an unsolved exercise now would just waste wha
    - a hint when you're stuck — ask explicitly for a hint, not a fix, and say what you've already tried
    - a review of code once something runs, even if it's ugly
    - a reference implementation to compare against, once you've made a genuine attempt — treat it like a course's answer key released after the deadline, not the default output
-6. **Write a short note** in `notes/`. Explaining a result back to yourself in writing is where a lot of the actual learning happens; `bench.db` captures what happened, the notes capture what you understood.
+6. **Write it down, in two places.** `notes/` gets the technical answer — what the result was, your comprehension-checkpoint answers, what you understood. `book/log/` gets the raw narrative the same day: what you expected, where you got stuck, what you'd tell someone about to try it. Explaining a result back to yourself is where much of the learning actually lands; `bench.db` captures what happened, `notes/` captures what you understood, and `book/log/` captures what it was like not to understand it yet — which is the only one of the three that cannot be reconstructed later. See [`book/README.md`](book/README.md).
 
 ## Asking well
 

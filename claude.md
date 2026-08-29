@@ -33,6 +33,16 @@ a README in each package — precisely because that exception still has to pay
 for itself pedagogically. Don't extend the "fully implement it" pattern into
 `projects/`.
 
+**`book/` is the same rule applied to prose, and it is absolute.** That folder
+records the learning as it unfolds, with a view to becoming a book. Claude
+never writes log entries, retrospectives, or chapter drafts there, and never
+pre-populates them with plausible content Felipe hasn't actually experienced —
+the whole value of the folder is that it holds something a model cannot
+generate. Reacting to a draft he wrote, pointing out an unclear explanation,
+proposing a structure, or asking questions that surface something left
+implicit: all welcome. Ghostwriting: not. Templates and scaffolding in
+`book/` were written by Claude; everything with substance in it is his.
+
 ## Two ground rules
 
 **1. PyTorch and HuggingFace. No TensorFlow.**

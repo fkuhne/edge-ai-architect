@@ -18,6 +18,11 @@ useful, code review — not finished code.
 Full explanation, including how to ask well and what the comprehension
 checkpoints are for: **[LEARNING_GUIDE.md](LEARNING_GUIDE.md)**.
 
+The learning also gets written down as it happens, in **[book/](book/README.md)** —
+raw same-day log entries, a retrospective per phase, and cross-phase threads.
+Possibly a book eventually, with this repo as its companion code. Claude writes
+none of it; that folder is the one thing here a model couldn't generate.
+
 ## Quickstart
 
 ```bash
@@ -95,11 +100,12 @@ See [CLAUDE.md](CLAUDE.md) for the full conventions.
 
 ```
 LEARNING_GUIDE.md   the mentorship model -- read this before anything else
+book/               the learning documented as it unfolds -- see its README
 edgebench/          portable measurement (stdlib + psutil only) -- see its README
 runners/            backend abstraction: torch | onnx | coreml | mlx -- see its README
 projects/           one directory per phase project
 curriculum/         phase briefs, each ending in a comprehension checkpoint
-notes/              learning notes
+notes/              technical notes and checkpoint answers
 results/            bench.db and generated plots
 ```
 
