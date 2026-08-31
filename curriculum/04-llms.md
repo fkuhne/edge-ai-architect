@@ -1,9 +1,10 @@
-# Phase 3 — On-device LLMs
+# Phase 4 — On-device LLMs
 
-**Weeks 10–14** · *How does a transformer behave under a hard memory ceiling?*
+**Weeks 14–18** · *How does a transformer behave under a hard memory ceiling?*
 
 The longest phase, and where the 8 GB constraint becomes genuinely interesting.
-Everything from Phase 1 returns at a scale where the tradeoffs are unavoidable.
+Phase 1's compression ladder returns at a scale where the tradeoffs are
+unavoidable, applied to the architecture Phase 3 took apart.
 
 ## Theory
 
@@ -15,10 +16,12 @@ Everything from Phase 1 returns at a scale where the tradeoffs are unavoidable.
   *PagedAttention (vLLM)* · Dao, *FlashAttention*.
 - **llama.cpp** k-quant documentation — what `Q4_K_M` actually means.
 - **MIT 6.5940**, the efficient-LLM lectures.
-- If attention internals are fuzzy: **Karpathy, *Let's build GPT*** — two hours,
-  worth it before touching speculative decoding.
 
-## Build — `projects/p03-llm-on-device/`
+Phase 3 covered the architecture itself. If you skipped it, the KV-cache
+derivation in `03-nlp.md` (b) is the prerequisite for everything below — the
+memory ceiling in this phase *is* that formula.
+
+## Build — `projects/p04-llm-on-device/`
 
 > **How this phase works.** Ask Claude for scaffolding for each of the three
 > pieces below — a task breakdown and stubs, not finished scripts. (c) in
@@ -29,7 +32,7 @@ Everything from Phase 1 returns at a scale where the tradeoffs are unavoidable.
 > [`LEARNING_GUIDE.md`](../LEARNING_GUIDE.md).
 
 ```bash
-make clean-phase && make env-p03
+make clean-phase && make env-p04
 brew install cmake          # llama.cpp needs it
 make disk                   # check before downloading weights
 ```

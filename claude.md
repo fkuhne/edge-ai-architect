@@ -72,7 +72,7 @@ or `runners/`.
 ## Measurement
 
 Every experiment reports through `edgebench` — that is what makes a pruned CNN
-from Phase 1 comparable to a 4-bit LLM from Phase 3.
+from Phase 1 comparable to a 4-bit LLM from Phase 4.
 
 ```python
 import edgebench

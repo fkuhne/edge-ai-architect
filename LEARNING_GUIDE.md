@@ -6,7 +6,7 @@ The operating manual for using Claude as a mentor on this repo, not a contractor
 
 Phase 0 — the `edgebench` measurement library and the `runners` backend abstraction — was built end to end by Claude in the first session: fully implemented, tested, documented. For a project whose entire point is Felipe building skills himself, that was the wrong call, and he corrected it directly: *"I told you that my objective was to LEARN. how would I learn if you do everything to me?"*
 
-The code stays — rewriting it as an unsolved exercise now would just waste what's already there — but it's repositioned as a **worked example**, not a template for how the rest of this repo gets built. Phases 1 through 6, where the actual edge-ML skills live, work differently from here on.
+The code stays — rewriting it as an unsolved exercise now would just waste what's already there — but it's repositioned as a **worked example**, not a template for how the rest of this repo gets built. Phases 1 through 7, where the actual edge-ML skills live, work differently from here on.
 
 ## The loop, for every phase from here on
 
@@ -59,7 +59,7 @@ Each phase brief now ends with a short list of questions that can't be answered 
 
 Rather than skim `edgebench/` and `runners/` as a library to import and forget, three READMEs walk through the design decisions:
 
-- [`edgebench/README.md`](edgebench/README.md) — the measurement library: why percentiles over means, why timing needs a device sync, why memory units differ by platform, how results stay comparable across seven months of phases.
+- [`edgebench/README.md`](edgebench/README.md) — the measurement library: why percentiles over means, why timing needs a device sync, why memory units differ by platform, how results stay comparable across eight months of phases.
 - [`edgebench/power/README.md`](edgebench/power/README.md) — why power measurement is the most fragmented part of the whole library, and the plug-in pattern used to handle that.
 - [`runners/README.md`](runners/README.md) — the backend abstraction itself: the pattern Phase 2 asks you to extend, demonstrated once before you're asked to build on it.
 

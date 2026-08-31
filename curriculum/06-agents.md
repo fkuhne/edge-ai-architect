@@ -1,6 +1,6 @@
-# Phase 5 — Local agentic runtime & RAG
+# Phase 6 — Local agentic runtime & RAG
 
-**Weeks 19–23** · *How do I make a small model reliable enough to trust with tools?*
+**Weeks 23–27** · *How do I make a small model reliable enough to trust with tools?*
 
 A 3B model that can call tools is a different engineering problem from a frontier
 model that can. It will fail more often, in more ways, and the interesting work is
@@ -17,7 +17,7 @@ agentic problem the job descriptions describe.
   properly; they are the point of this phase.
 - Agent evaluation methodology generally: **task success rate over anecdote**.
 
-## Build — `projects/p05-local-agent/`
+## Build — `projects/p06-local-agent/`
 
 > **How this phase works.** Ask Claude for scaffolding — a task breakdown and
 > stubs for the capability layer and eval harness if useful — not a finished
@@ -33,7 +33,7 @@ An agent over your own documents. Components:
   `all-MiniLM-L6-v2` is ~90 MB and adequate), `sqlite-vec` for the index. Keeping
   the vector store in the same SQLite file as `bench.db`'s sibling is a
   reasonable simplification at this scale.
-- **Generation**: the Phase-3 quantized LLM through the Phase-2 `Runner`.
+- **Generation**: the Phase-4 quantized LLM through the Phase-2 `Runner`.
 - **Corpus**: personal notes, the papers from this curriculum, or HP-public
   material. Nothing leaves the machine.
 

@@ -1,6 +1,6 @@
-# Phase 4 — Streaming multimodal perception
+# Phase 5 — Streaming multimodal perception
 
-**Weeks 15–18** · *How do I hold a real-time latency budget end to end?*
+**Weeks 19–22** · *How do I hold a real-time latency budget end to end?*
 
 Everything so far measured one model in isolation. Real edge systems are
 pipelines, and a pipeline's latency is not the sum of its parts — it is whatever
@@ -20,7 +20,7 @@ one and instruments it properly.
 - Queueing basics: why a stage at 95% utilization has unbounded latency. Little's
   Law is enough theory.
 
-## Build — `projects/p04-streaming-perception/`
+## Build — `projects/p05-streaming-perception/`
 
 > **How this phase works.** Ask Claude for scaffolding — a project brief
 > breaking the pipeline into stages with a task list, and stubs for the
@@ -41,7 +41,7 @@ mic capture → VAD → streaming ASR → local LLM summarization
   so ASR is not transcribing silence — the cheapest large win available.
 - **ASR**: `faster-whisper` (CTranslate2) or `whisper.cpp`. **Both are portable**
   to CUDA, which is why they are preferred over an Apple-only path.
-- **Summarization**: the Phase-3 quantized LLM through the Phase-2 `Runner`.
+- **Summarization**: the Phase-4 quantized LLM through the Phase-2 `Runner`.
 
 ### The real work
 

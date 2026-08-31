@@ -24,7 +24,7 @@ Cadence: whenever a session produced a surprise, a stuck point, or a decision. N
 
 Written with hindsight, while still fresh. **This is the bridge layer, and it is the one that makes a book actually happen.** A phase retrospective is already roughly chapter-shaped: it knows how the story ended, it can say what mattered and what was noise, and it can be honest about the parts that were harder than they should have been.
 
-Seven phases, seven retrospectives, and you have a real draft instead of a pile of notes and a large unpleasant task.
+Eight phases, eight retrospectives, and you have a real draft instead of a pile of notes and a large unpleasant task.
 
 ### 3. The manuscript — much later
 

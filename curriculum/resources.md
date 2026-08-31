@@ -9,7 +9,7 @@ nothing is listed that isn't actually read during a phase.
 HAN Lab). Lectures on YouTube, slides public. The single most valuable resource
 in this curriculum: pruning, quantization, NAS, distillation, on-device training,
 and efficient LLM inference, all with the systems detail that most courses skip.
-Used in Phases 1, 2, and 3.
+Used in Phases 1, 2, and 4.
 
 **Machine Learning Systems: Principles and Practices of Engineering Artificially
 Intelligent Systems** (Vijay Janapa Reddi, Harvard). Free at
@@ -20,10 +20,11 @@ Used in Phases 0 and 1.
 
 | Book | Author | Phase | Why |
 |---|---|---|---|
-| *AI Engineering* | Chip Huyen (2025) | 5 | Best single text on evals, guardrails, LLM app architecture |
-| *Designing Machine Learning Systems* | Chip Huyen | 6 | MLOps foundations: deployment, monitoring, continual learning |
+| *AI Engineering* | Chip Huyen (2025) | 6 | Best single text on evals, guardrails, LLM app architecture |
+| *Designing Machine Learning Systems* | Chip Huyen | 7 | MLOps foundations: deployment, monitoring, continual learning |
 | *Efficient Processing of Deep Neural Networks* | Sze, Chen, Yang, Emer | 2 | The definitive hardware/dataflow text. Dense; skim first |
 | *TinyML* | Warden & Situnayake | optional | MCU/embedded framing. Dated on tooling, sound on concepts |
+| *Speech and Language Processing* (3rd ed.) | Jurafsky & Martin | 3 | The standard NLP text. Free draft; tokenization, embeddings, transformers |
 
 ## Papers by phase
 
@@ -42,7 +43,24 @@ Used in Phases 0 and 1.
   why the ANE wants particular layouts
 - **MLPerf Inference** (Reddi et al., 2020) — benchmark methodology
 
-### Phase 3 — LLM inference and adaptation
+### Phase 3 — language, tokens and architecture
+- Vaswani et al., **Attention Is All You Need** (2017)
+- Devlin et al., **BERT** (2018) — encoder-only
+- Raffel et al., **T5** (2019) — encoder-decoder; the shape Whisper inherits
+- Sennrich et al., **Neural Machine Translation of Rare Words with Subword
+  Units** (2016) — BPE, the tokenizer everything descends from
+- Kudo & Richardson, **SentencePiece** (2018)
+- Shazeer, **Fast Transformer Decoding** (2019) — multi-query attention
+- Ainslie et al., **GQA** (2023) — the compromise Llama and Qwen actually ship
+- Su et al., **RoFormer / RoPE** (2021) — positional encoding, and why context
+  extension is possible at all
+- Sanh et al., **DistilBERT** (2019) — Phase 1's distillation applied to language
+- Reimers & Gurevych, **Sentence-BERT** (2019) — sentence embeddings; the
+  retrieval side of Phase 6
+- Hoffmann et al., **Chinchilla** (2022) — why small models are usually
+  undertrained rather than fundamentally limited
+
+### Phase 4 — LLM inference and adaptation
 - Dettmers et al., **LLM.int8()** (2022) — read first; the outlier-feature
   explanation makes the rest legible
 - Frantar et al., **GPTQ** (2022)
@@ -57,13 +75,13 @@ Used in Phases 0 and 1.
   PagedAttention** (2023) — the vLLM paper
 - Dao et al., **FlashAttention** (2022)
 
-### Phase 4 — perception and edge systems
+### Phase 5 — perception and edge systems
 - Radford et al., **Robust Speech Recognition via Large-Scale Weak Supervision**
   (2022) — Whisper
 - Wu et al., **Machine Learning at Facebook: Understanding Inference at the
   Edge** (HPCA 2019) — still the best paper on real edge constraints
 
-### Phase 5 — agents
+### Phase 6 — agents
 - Yao et al., **ReAct: Synergizing Reasoning and Acting in Language Models** (2022)
 - Schick et al., **Toolformer** (2023)
 - Lewis et al., **Retrieval-Augmented Generation** (2020) — the original framing
@@ -81,7 +99,12 @@ Used in Phases 0 and 1.
 ## Video
 
 - **MIT 6.5940 lectures** — the whole course, free
-- **Karpathy, *Let's build GPT*** — two hours; worth it before Phase 3(c)
+- **Stanford CS224N — NLP with Deep Learning** — the canonical NLP course, free
+- **HuggingFace NLP Course** — free, hands-on, and uses this project's exact stack
+- **Karpathy, *Let's build the GPT Tokenizer*** — two hours; the best preparation
+  for Phase 3(a)
+- **Karpathy, *Let's build GPT*** — two hours; worth it before Phase 3(b)
+- **Jay Alammar, *The Illustrated Transformer*** — read before the paper, not after
 - **Karpathy, *Neural Networks: Zero to Hero*** — if foundations need refreshing
 - **Apple WWDC sessions on Core ML and the Neural Engine** *(optional)*
 
@@ -92,5 +115,5 @@ Used in Phases 0 and 1.
 - **TensorRT, OpenVINO deep-dives** — vendor-specific and not runnable on this
   machine. The ONNX Runtime EP abstraction covers the transferable concepts;
   revisit if hardware changes.
-- **Kubernetes** — no Docker and no disk. Phase 6 learns control-plane concepts
+- **Kubernetes** — no Docker and no disk. Phase 7 learns control-plane concepts
   in Python instead.

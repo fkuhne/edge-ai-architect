@@ -10,7 +10,7 @@ the harness that produced it.
 
 Phase 0 was fully implemented already — by Claude, in one pass, including
 tests. That wasn't the right call for a project whose whole point is that you
-build things yourself, and it won't happen again for Phases 1–6: those come as
+build things yourself, and it won't happen again for Phases 1–7: those come as
 scaffolding and guidance, not finished code, so the building is yours. See
 [`LEARNING_GUIDE.md`](../LEARNING_GUIDE.md) for the full reasoning.
 

@@ -11,7 +11,7 @@ a generic Linux/CUDA box and merely happens to be developed on an Apple M3.
 This is a mentor relationship, not a build contract — Claude scaffolds and
 explains, you implement. Phase 0 (`edgebench/`, `runners/`) is the one
 exception: fully pre-built as shared infrastructure, and documented as a
-worked example rather than a black box. Phases 1–6, where the actual edge-ML
+worked example rather than a black box. Phases 1–7, where the actual edge-ML
 skills live, work as guided builds — theory, a task breakdown, stubs where
 useful, code review — not finished code.
 
@@ -63,10 +63,11 @@ Sized for ~6–10 hrs/week. Phases are sequential and the projects compound.
 | 0 | [Bootstrap & edgebench](curriculum/00-bootstrap.md) | 1 | How do I measure anything credibly, on any machine? | ✓ pre-built* |
 | 1 | [Foundations & compression](curriculum/01-foundations.md) | 2–5 | What do I actually give up to make a model small? | ☐ your build |
 | 2 | [Runtimes & backend abstraction](curriculum/02-runtimes.md) | 6–9 | How does one model run on any accelerator without a rewrite? | ☐ your build |
-| 3 | [On-device LLMs](curriculum/03-llms.md) | 10–14 | How does a transformer behave under a hard memory ceiling? | ☐ your build |
-| 4 | [Streaming perception](curriculum/04-perception.md) | 15–18 | How do I hold a real-time latency budget end to end? | ☐ your build |
-| 5 | [Agentic runtime & RAG](curriculum/05-agents.md) | 19–23 | How do I make a small model reliable enough to trust with tools? | ☐ your build |
-| 6 | [Platform & lifecycle](curriculum/06-platform.md) | 24–28 | How does this become a system rather than a pile of scripts? | ☐ your build |
+| 3 | [Language, tokens & transformers](curriculum/03-nlp.md) | 10–13 | Why is a transformer shaped the way it is, and which shape should I reach for? | ☐ your build |
+| 4 | [On-device LLMs](curriculum/04-llms.md) | 14–18 | How does a transformer behave under a hard memory ceiling? | ☐ your build |
+| 5 | [Streaming perception](curriculum/05-perception.md) | 19–22 | How do I hold a real-time latency budget end to end? | ☐ your build |
+| 6 | [Agentic runtime & RAG](curriculum/06-agents.md) | 23–27 | How do I make a small model reliable enough to trust with tools? | ☐ your build |
+| 7 | [Platform & lifecycle](curriculum/07-platform.md) | 28–32 | How does this become a system rather than a pile of scripts? | ☐ your build |
 
 \* *Phase 0 was fully implemented by Claude, which — for a project about learning
 edge ML by building it — was more than it should have done. It's kept as a

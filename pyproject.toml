@@ -32,6 +32,10 @@ hf = [
     "accelerate>=0.27",
     "peft>=0.9",
 ]
+# Phase 3: classification metrics for the architecture bake-off
+nlp = [
+    "scikit-learn>=1.4",
+]
 # Reporting
 viz = [
     "matplotlib>=3.8",

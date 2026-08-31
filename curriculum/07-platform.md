@@ -1,6 +1,6 @@
-# Phase 6 — Platform: serving, lifecycle & fleet
+# Phase 7 — Platform: serving, lifecycle & fleet
 
-**Weeks 24–28** · *How does this become a system rather than a pile of scripts?*
+**Weeks 28–32** · *How does this become a system rather than a pile of scripts?*
 
 Five phases have produced models, runtimes, and pipelines. This one makes them
 operable: something that can be deployed, observed, updated, and rolled back.
@@ -18,7 +18,7 @@ underneath it were built first.
 - **MLPerf Inference** methodology, revisited: by now you have your own
   benchmark data, and it is worth comparing your methodology against theirs.
 
-## Build — `projects/p06-edge-platform/`
+## Build — `projects/p07-edge-platform/`
 
 > **How this phase works.** Ask Claude for scaffolding — component breakdowns
 > and stubs for the fiddlier plumbing if useful — not a finished platform.
@@ -71,7 +71,7 @@ does not.
 - [ ] A model is promoted and rolled back **without touching the gateway**.
 - [ ] Signature verification refuses a tampered model, with a test proving it.
 - [ ] A trace shows one request crossing gateway → router → runtime with timings.
-- [ ] The dashboard renders the accumulated results from all six phases.
+- [ ] The dashboard renders the accumulated results from all seven phases.
 
 ## Watch out
 
@@ -102,7 +102,7 @@ Answer these in your own words in `notes/` before calling the phase done:
 
 ---
 
-## Capstone (week 28+)
+## Capstone (week 32+)
 
 Write the architecture document the Distinguished Technologist posting describes:
 
@@ -111,7 +111,7 @@ Write the architecture document the Distinguished Technologist posting describes
 - **ADRs** for the real decisions: why ONNX Runtime as the portable path, why
   GGUF over MLX, what the LoRA/QLoRA portability seam cost, where the abstraction
   leaked.
-- **The data** — seven months of Pareto curves from `bench.db`, showing the
+- **The data** — eight months of Pareto curves from `bench.db`, showing the
   quality/latency/memory/energy tradeoffs measured rather than asserted.
 
 That document, backed by working code and your own measurements, is the artifact

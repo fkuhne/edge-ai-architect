@@ -31,7 +31,12 @@ env-p02: ## Phase 2: portable runtimes (torch, onnx, optimum, viz)
 	$(UV) pip install -e ".[torch,onnx,viz]"
 
 .PHONY: env-p03
-env-p03: ## Phase 3: on-device LLMs (torch, HuggingFace stack, viz)
+env-p03: ## Phase 3: NLP foundations (torch, HuggingFace stack, sklearn, viz)
+	$(UV) venv --python 3.10 $(VENV)
+	$(UV) pip install -e ".[torch,hf,nlp,viz]"
+
+.PHONY: env-p04
+env-p04: ## Phase 4: on-device LLMs (torch, HuggingFace stack, viz)
 	$(UV) venv --python 3.10 $(VENV)
 	$(UV) pip install -e ".[torch,hf,viz]"
 
