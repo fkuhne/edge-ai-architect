@@ -1,9 +1,10 @@
 # edge-ai-architect
 #
-# Disk is the binding constraint on this machine (~15 GB free), so environments
-# are built per phase and torn down when the phase ends rather than accumulating
-# every backend in one venv. `make disk` before starting a phase; `make
-# clean-phase` when finishing one.
+# Disk binds on this machine, so environments are built per phase and torn down
+# when the phase ends rather than accumulating every backend in one venv.
+# `make disk` before starting a phase; `make clean-phase` when finishing one.
+# The env-* targets use `uv venv --clear`, so re-running one is safe: your work
+# lives in projects/, notes/ and results/, never in the venv.
 
 VENV        ?= .venv
 PY          := $(VENV)/bin/python
@@ -17,28 +18,28 @@ BUDGET_GB   ?= 8
 
 .PHONY: env-core
 env-core: ## Core only: edgebench + psutil, no ML frameworks (~15 MB)
-	$(UV) venv --python 3.10 $(VENV)
-	$(UV) pip install -e .
+	$(UV) venv --clear --python 3.10 $(VENV)
+	$(UV) pip install -e ".[dev]"
 
 .PHONY: env-p01
 env-p01: ## Phase 1: training + compression (torch, torchvision, viz)
-	$(UV) venv --python 3.10 $(VENV)
-	$(UV) pip install -e ".[torch,viz]"
+	$(UV) venv --clear --python 3.10 $(VENV)
+	$(UV) pip install -e ".[torch,viz,dev]"
 
 .PHONY: env-p02
 env-p02: ## Phase 2: portable runtimes (torch, onnx, optimum, viz)
-	$(UV) venv --python 3.10 $(VENV)
-	$(UV) pip install -e ".[torch,onnx,viz]"
+	$(UV) venv --clear --python 3.10 $(VENV)
+	$(UV) pip install -e ".[torch,onnx,viz,dev]"
 
 .PHONY: env-p03
 env-p03: ## Phase 3: NLP foundations (torch, HuggingFace stack, sklearn, viz)
-	$(UV) venv --python 3.10 $(VENV)
-	$(UV) pip install -e ".[torch,hf,nlp,viz]"
+	$(UV) venv --clear --python 3.10 $(VENV)
+	$(UV) pip install -e ".[torch,hf,nlp,viz,dev]"
 
 .PHONY: env-p04
 env-p04: ## Phase 4: on-device LLMs (torch, HuggingFace stack, viz)
-	$(UV) venv --python 3.10 $(VENV)
-	$(UV) pip install -e ".[torch,hf,viz]"
+	$(UV) venv --clear --python 3.10 $(VENV)
+	$(UV) pip install -e ".[torch,hf,viz,dev]"
 
 .PHONY: env-apple
 env-apple: ## Add the optional Darwin-only comparison backends (coremltools, mlx)
@@ -46,12 +47,23 @@ env-apple: ## Add the optional Darwin-only comparison backends (coremltools, mlx
 
 # ------------------------------------------------------------------- verifying
 
+.PHONY: check-venv
+check-venv:
+	@test -x $(PY) || { \
+		echo "No phase environment found at $(VENV)/"; \
+		echo; \
+		echo "Create one first:"; \
+		echo "  make env-core   # just edgebench, no ML frameworks (~15 MB)"; \
+		echo "  make env-p01    # Phase 1: training + compression"; \
+		echo "  make help       # all options"; \
+		exit 1; }
+
 .PHONY: selftest
-selftest: ## Run the Phase 0 acceptance test
+selftest: check-venv ## Run the Phase 0 acceptance test
 	$(PY) -m edgebench.selftest
 
 .PHONY: check
-check: ## Prove ground rule 2 still holds: same harness, different devices
+check: check-venv ## Prove ground rule 2 still holds: same harness, different devices
 	@echo "== auto-selected device =="
 	@$(PY) -m edgebench.selftest --no-store
 	@echo
@@ -65,15 +77,15 @@ check: ## Prove ground rule 2 still holds: same harness, different devices
 	@$(PY) -c "import runners; print(runners.describe())"
 
 .PHONY: report
-report: ## Print the results table
+report: check-venv ## Print the results table
 	$(PY) -m edgebench.report
 
 .PHONY: pareto
-pareto: ## Plot quality against latency (needs the viz extra)
+pareto: check-venv ## Plot quality against latency (needs the viz extra)
 	$(PY) -m edgebench.report --plot results/pareto.png
 
 .PHONY: test
-test: ## Run the unit tests
+test: check-venv ## Run the unit tests
 	$(PY) -m pytest -q
 
 # --------------------------------------------------------------------- hygiene

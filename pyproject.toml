@@ -11,7 +11,7 @@ dependencies = [
     "psutil>=5.9",
 ]
 
-# Heavy dependencies are opt-in, per phase. On a 15 GB disk, installing every
+# Heavy dependencies are opt-in, per phase. On a small disk, installing every
 # backend at once is not an option -- see `make env-<phase>` in the Makefile.
 [project.optional-dependencies]
 # Phase 1: training + compression

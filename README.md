@@ -23,16 +23,39 @@ raw same-day log entries, a retrospective per phase, and cross-phase threads.
 Possibly a book eventually, with this repo as its companion code. Claude writes
 none of it; that folder is the one thing here a model couldn't generate.
 
-## Quickstart
+## Start here
 
-```bash
-make env-core     # edgebench + psutil, no ML frameworks (~15 MB)
-make selftest     # prove the measurement harness works here
-make check        # prove it still works with the device and power sampler swapped
-```
+In this order:
 
-`make selftest` runs without PyTorch installed. That is intentional: the harness
-must be verifiable before spending 2.5 GB of a 15 GB disk on a framework.
+1. **Check the harness runs on this machine.**
+   ```bash
+   make env-core     # edgebench + psutil, no ML frameworks (~15 MB)
+   make selftest     # one benchmark, end to end
+   make check        # same harness, device and power sampler swapped
+   ```
+   `make selftest` works without PyTorch installed — the harness must be
+   verifiable before spending 2.5 GB on a framework.
+
+2. **Read [LEARNING_GUIDE.md](LEARNING_GUIDE.md).** How the mentoring works, how
+   to phrase a request so you get scaffolding instead of finished code, and what
+   happens when you're stuck. Ten minutes, and it changes what the rest of this
+   repo is for.
+
+3. **Work [Phase 0](curriculum/00-bootstrap.md).** The code is pre-built, but its
+   comprehension checkpoint is not — answer it in `notes/` before treating
+   `edgebench` as settled infrastructure.
+
+4. **Start Phase 1.**
+   ```bash
+   make clean-phase && make env-p01
+   ```
+   Read [curriculum/01-foundations.md](curriculum/01-foundations.md), then ask
+   Claude for the project brief.
+
+**Every session after that:** say which phase you're on and what you've already
+tried. Claude starts each session without memory of the last one, so that one
+sentence is what makes the mentoring continuous. Tick the status column below as
+you go — it's the progress record.
 
 ## Why this exists
 
@@ -82,7 +105,7 @@ Full bibliography: [curriculum/resources.md](curriculum/resources.md).
 | | | |
 |---|---|---|
 | Memory | 8 GB unified (Apple M3) | Caps local LLMs to ~0.5B–3B at 4-bit |
-| Disk | ~15 GB free | One phase environment at a time |
+| Disk | ~25GiB free — check with `make disk` | One phase environment at a time |
 | Accelerators | Metal GPU, 16-core Neural Engine | Reached only through `runners/` |
 
 The constraints are not obstacles to route around — they are the subject. Every

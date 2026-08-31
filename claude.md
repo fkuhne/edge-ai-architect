@@ -105,7 +105,7 @@ rule 1.
 
 ## Disk and memory
 
-8 GB unified memory, ~15 GB free disk. Both bind, constantly.
+8 GB unified memory, ~25GiB free disk (check `make disk`). Both bind.
 
 - **One phase environment at a time.** `make env-p01`, then `make clean-phase`
   before `make env-p02`. Do not install every backend at once.
