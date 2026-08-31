@@ -23,6 +23,14 @@ choices actually bind on an 8 GB machine.
 
 **Core** — pick the format that suits you; these overlap heavily by design:
 
+- **Tunstall, von Werra & Wolf, *Natural Language Processing with
+  Transformers*** (O'Reilly) — the closest fit to this phase. Written by the
+  HuggingFace team, so it uses this project's exact stack, and it covers
+  tokenizers, encoder-vs-decoder tradeoffs, distillation, and transformer
+  quantization in roughly the order below. Start here if you want one book.
+- **Alammar & Grootendorst, *Hands-On Large Language Models*** (O'Reilly) — the
+  *Illustrated Transformer* author at book length. Unusually visual; good for
+  intuition before the papers.
 - **Jurafsky & Martin, *Speech and Language Processing* (3rd ed.)** — free draft
   at [stanford.edu/~jurafsky/slp3](https://web.stanford.edu/~jurafsky/slp3/).
   The standard text. Chapters on subword tokenization, embeddings, transformers,

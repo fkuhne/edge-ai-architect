@@ -15,6 +15,9 @@ unavoidable, applied to the architecture Phase 3 took apart.
 - **Inference systems**: Leviathan et al., *Speculative Decoding* · Kwon et al.,
   *PagedAttention (vLLM)* · Dao, *FlashAttention*.
 - **llama.cpp** k-quant documentation — what `Q4_K_M` actually means.
+- **Alammar & Grootendorst, *Hands-On Large Language Models*** (O'Reilly) —
+  carries over from Phase 3; the chapters on quantization and inference are the
+  gentler on-ramp to the papers above.
 - **MIT 6.5940**, the efficient-LLM lectures.
 
 Phase 3 covered the architecture itself. If you skipped it, the KV-cache

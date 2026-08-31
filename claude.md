@@ -94,6 +94,15 @@ result = edgebench.benchmark(
 - Timing already synchronises the device. Do not add your own — and do not
   remove it, or you will be timing kernel dispatch rather than compute.
 
+## Bibliography
+
+Felipe has **full O'Reilly platform access** — books, video courses, and live
+training. Prefer an O'Reilly title over one he'd have to buy, and mark
+availability in `curriculum/resources.md`. The exception worth remembering:
+Géron's *Hands-On Machine Learning with Scikit-Learn, Keras & TensorFlow* is
+the most prominent ML book on the platform and is **out of scope** under ground
+rule 1.
+
 ## Disk and memory
 
 8 GB unified memory, ~15 GB free disk. Both bind, constantly.

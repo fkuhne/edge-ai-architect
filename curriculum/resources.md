@@ -18,13 +18,24 @@ Used in Phases 0 and 1.
 
 ## Books
 
-| Book | Author | Phase | Why |
-|---|---|---|---|
-| *AI Engineering* | Chip Huyen (2025) | 6 | Best single text on evals, guardrails, LLM app architecture |
-| *Designing Machine Learning Systems* | Chip Huyen | 7 | MLOps foundations: deployment, monitoring, continual learning |
-| *Efficient Processing of Deep Neural Networks* | Sze, Chen, Yang, Emer | 2 | The definitive hardware/dataflow text. Dense; skim first |
-| *TinyML* | Warden & Situnayake | optional | MCU/embedded framing. Dated on tooling, sound on concepts |
-| *Speech and Language Processing* (3rd ed.) | Jurafsky & Martin | 3 | The standard NLP text. Free draft; tokenization, embeddings, transformers |
+Felipe has **full O'Reilly platform access**, so anything marked O'R below is
+available at no cost — books, video courses, and live training alike. Prefer
+those over titles that need buying.
+
+| Book | Author | Phase | Access | Why |
+|---|---|---|---|---|
+| *Natural Language Processing with Transformers* | Tunstall, von Werra & Wolf | **3** | O'R | Written by the HuggingFace team, so it uses this project's exact stack. Maps onto Phase 3 almost chapter for chapter: tokenizers, encoder vs. decoder, distillation, transformer quantization |
+| *Hands-On Large Language Models* | Alammar & Grootendorst (2024) | 3–4 | O'R | The *Illustrated Transformer* author at book length. Unusually visual; good for building architectural intuition before the papers |
+| *AI Engineering* | Chip Huyen (2025) | 6 | O'R | Best single text on evals, guardrails, LLM app architecture |
+| *Designing Machine Learning Systems* | Chip Huyen | 7 | O'R | MLOps foundations: deployment, monitoring, continual learning |
+| *TinyML* | Warden & Situnayake | optional | O'R | MCU/embedded framing. Dated on tooling, sound on concepts |
+| *Speech and Language Processing* (3rd ed.) | Jurafsky & Martin | 3 | free | The standard NLP text. Free draft from Stanford; tokenization, embeddings, transformers |
+| *Efficient Processing of Deep Neural Networks* | Sze, Chen, Yang, Emer | 2 | — | The definitive hardware/dataflow text. Dense; skim first |
+
+O'Reilly's catalog shifts, and these are listed as likely-available rather than
+verified — search the platform rather than trusting the list exactly. It also
+carries video courses and live training on PyTorch and transformers, which are
+worth checking when a topic is not landing from text.
 
 ## Papers by phase
 
@@ -111,7 +122,11 @@ Used in Phases 0 and 1.
 ## Deliberately excluded
 
 - **TensorFlow, TFLite, Keras** — out of scope by project convention. The
-  PyTorch and HuggingFace equivalents cover the same ground.
+  PyTorch and HuggingFace equivalents cover the same ground. This rules out
+  Géron's *Hands-On Machine Learning with Scikit-Learn, Keras & TensorFlow*,
+  which is worth naming because it is the most prominent ML book on O'Reilly
+  and the obvious thing to reach for. Good book; wrong framework for this
+  project.
 - **TensorRT, OpenVINO deep-dives** — vendor-specific and not runnable on this
   machine. The ONNX Runtime EP abstraction covers the transferable concepts;
   revisit if hardware changes.
