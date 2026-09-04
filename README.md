@@ -120,6 +120,17 @@ interface anything is written against.
 
 See [CLAUDE.md](CLAUDE.md) for the full conventions.
 
+## Licence
+
+Code (`edgebench/`, `runners/`, `tests/`, `projects/`) is **MIT**. Written
+content (`curriculum/`, `book/`, `notes/`, the guides) is **CC BY 4.0**. Both
+let anyone use, adapt, and sell derivative work; both require keeping the
+attribution. See [LICENSE](LICENSE) and [LICENSE-CONTENT](LICENSE-CONTENT).
+
+`job-descriptions/` is **not covered by either** — it is HP's published text,
+included only as a source for defining the curriculum's scope. Remove it before
+distributing this repo publicly.
+
 ## Layout
 
 ```

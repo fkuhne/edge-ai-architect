@@ -1,0 +1,35 @@
+# License for written content
+
+Copyright (c) 2026 Felipe Kuhne
+
+The **written content** of this repository — the curriculum briefs in
+`curriculum/`, the guides (`README.md`, `LEARNING_GUIDE.md`), everything in
+`book/`, and everything in `notes/` — is licensed under the
+
+**Creative Commons Attribution 4.0 International License (CC BY 4.0)**
+
+Full text: https://creativecommons.org/licenses/by/4.0/legalcode
+Summary:   https://creativecommons.org/licenses/by/4.0/
+
+You are free to share and adapt this material, including commercially,
+provided you give appropriate credit.
+
+## Why two licenses
+
+MIT is a software licence and does not fit prose well; CC BY is designed for
+written work. Code and writing are split accordingly:
+
+| What | Licence |
+|---|---|
+| `edgebench/`, `runners/`, `tests/`, `projects/`, build files | MIT (see `LICENSE`) |
+| `curriculum/`, `book/`, `notes/`, `README.md`, `LEARNING_GUIDE.md` | CC BY 4.0 (this file) |
+
+## Third-party material — NOT covered by either licence
+
+`job-descriptions/` contains four job postings published by HP Inc. That text
+is not the author's work and is not licensed here. It is included as a source
+for defining the curriculum's subject scope.
+
+**Before distributing this repository publicly, remove that directory** or
+replace it with an original summary of the skills it was used to derive. Neither
+licence above grants any right to redistribute it.

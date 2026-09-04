@@ -44,7 +44,7 @@ The subject alone — learning edge ML — is crowded. What makes this particula
 
 
 
-**Licensing.** If the repo is companion content, decide early what license it carries — permissive enough that people can actually learn from it. Also worth deciding, since the book would be partly *about* this: how you disclose AI involvement in the work.
+**Licensing.** *Decided:* MIT for code, CC BY 4.0 for written content — permissive enough that anyone can learn from, adapt, or build on it, while keeping your name attached. `job-descriptions/` is third-party HP text and must come out before any public release. Still open, and worth deciding since the book would be partly *about* this: how you disclose AI involvement in the work.
 
 
 
