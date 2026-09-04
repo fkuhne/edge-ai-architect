@@ -4,7 +4,7 @@
 
 The phase where ground rule 2 stops being a convention and becomes the subject.
 The artifact — a working `Runner` abstraction with several backends behind it — is
-reused by Phases 3, 4, and 6, and is a miniature of what the Distinguished
+reused by Phases 4, 5, and 7, and is a miniature of what the Distinguished
 Technologist posting calls *"abstraction layers that let AI workloads deploy
 across diverse silicon without rewrites."*
 
@@ -48,7 +48,7 @@ The scaffolding is already in place — `runners/base.py` defines the contract,
 | `torch` | done | Reference baseline. Device-agnostic already. |
 | `onnx` | **implement** | The important one. `is_available()` and EP selection work; `_load`/`infer` are yours. |
 | `coreml` | **implement** | Optional plug-in. Reaches the ANE. Darwin only. |
-| `mlx` | Phase 3 | Leave it. |
+| `mlx` | Phase 4 | Leave it. |
 
 ### The real work
 

@@ -36,7 +36,7 @@ choice: latency target, model size, backend availability. The routing logic is
 the interesting part — the HTTP layer is not.
 
 Worth implementing: request batching, a queue with a bounded depth, and a
-documented behaviour when the queue is full. Phase 4's back-pressure lesson
+documented behaviour when the queue is full. Phase 5's back-pressure lesson
 applies again.
 
 ### Model registry

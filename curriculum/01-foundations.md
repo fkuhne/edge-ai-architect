@@ -3,7 +3,7 @@
 **Weeks 2–5** · *What do I actually give up to make a model small?*
 
 The central tradeoff of edge ML, learned on a model small enough to iterate on in
-minutes. Every technique here reappears at LLM scale in Phase 3 — quantization,
+minutes. Every technique here reappears at LLM scale in Phase 4 — quantization,
 pruning, and distillation are the same ideas whether the model has 300 K
 parameters or 3 B.
 
