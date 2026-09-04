@@ -40,3 +40,6 @@ onnxruntime_profile_*.json
 
 .DS_Store
 .env
+
+# Machine-local Claude Code settings (permission allowlists, not shareable)
+.claude/settings.local.json
